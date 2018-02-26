@@ -8,6 +8,14 @@ client.on('ready', () => {
 
 client.on('message', message => {
  
+  
+  if (message.content === 'åhelp') {
+    // Send the user's avatar URL
+    message.reply('COMMANDE :');
+    message.reply('avatar');
+    message.reply('emoji url nom');
+  }
+  
   if (message.content === 'avatar') {
     // Send the user's avatar URL
     message.reply(message.author.avatarURL);
