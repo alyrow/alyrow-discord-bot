@@ -13,7 +13,8 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content === 'ping') {
-    message.reply('pong');
+    const emoji = guild.emojis.first();
+msg.reply(`pong ${emoji}`);
   }
   if (message.content === 'avatar') {
     // Send the user's avatar URL
