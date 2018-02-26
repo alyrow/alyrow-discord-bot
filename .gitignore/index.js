@@ -1,10 +1,5 @@
 const Discord = require('discord.js');
 
-const hook = new Discord.WebhookClient('webhook id', 'webhook token');
-// Send a message using the webhook
-hook.send('Je suis la !');
-
-
 const client = new Discord.Client();
 
 client.on('ready', () => {
