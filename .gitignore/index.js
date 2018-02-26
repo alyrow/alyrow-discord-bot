@@ -7,20 +7,27 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-  if (message.content === 'ping') {
-msg.reply('pong');
-  }
+ 
   if (message.content === 'avatar') {
     // Send the user's avatar URL
     message.reply(message.author.avatarURL);
   }
   
-  
-  /*
-  // Create a new emoji from a url
-guild.createEmoji('https://i.imgur.com/w3duR07.png', 'rip')
+  if (message.content.startsWith('emoji')) {
+    // On récupère le premier channel audio du serveur
+    
+    // il faudrait utiliser une expression régulière pour valider le lien youtube
+    let args = message.content.split(' ')
+   
+       // let stream = YoutubeStream(args[1])
+     guild.createEmoji(args[1], args[2])
   .then(emoji => console.log(`Created new emoji with name ${emoji.name}!`))
   .catch(console.error);
+  }
+
+  /*
+  // Create a new emoji from a url
+
   
   
   guild.createRole({
