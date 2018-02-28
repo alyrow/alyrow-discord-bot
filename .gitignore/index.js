@@ -23,7 +23,7 @@ client.on('message', message => {
   
   if (message.content.startsWith('emoji')) {
     // On récupère le premier channel audio du serveur
-    
+    message.reply('breuh');
     // il faudrait utiliser une expression régulière pour valider le lien youtube
     let args = message.content.split(' ')
    
