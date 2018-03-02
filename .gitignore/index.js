@@ -1,6 +1,8 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 
+var youtubeStream = require('youtube-audio-stream')
+
 bot.on('ready', function () {
   console.log("Je suis connecté !")
 })
