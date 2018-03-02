@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 
-var youtubeStream = require('youtube-audio-stream')
+var isReady = true;
 
 bot.on('ready', function () {
   console.log("Je suis connecté !")
@@ -10,6 +10,25 @@ bot.on('ready', function () {
 
 bot.on('message', message => {
 
+  if (isReady && message.content === 'lol'){
+    isReady = false;
+    var voiceChannel = message.member.voiceChannel;
+    voiceChannel.join().then(connection =>{
+      const dispatcher = connection.playFile('./audiofile.mp3');
+      
+      
+                                          }).catch(err => console.log(err));
+    
+    dispatcher.on("end", end => {
+    voiceChannel.leave();
+    var isReady = true;
+    });
+    
+    
+    
+  }
+  
+  
   if (message.content.startsWith('!play')) {
     // On récupère le premier channel audio du serveur
     let voiceChannel = message.guild.channels
