@@ -1,7 +1,7 @@
 {
   "name": "alyrow-discord-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "A discord bot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.3.0"
-    "youtube-audio-stream": "^0.0.50"
+    
   }
 }
