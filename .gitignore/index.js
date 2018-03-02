@@ -16,13 +16,13 @@ bot.on('message', message => {
     voiceChannel.join().then(connection =>{
       const dispatcher = connection.playFile('./audiofile.mp3');
       
-      
-                                          }).catch(err => console.log(err));
-    
-    dispatcher.on("end", end => {
+      dispatcher.on("end", end => {
     voiceChannel.leave();
     var isReady = true;
     });
+                                          }).catch(err => console.log(err));
+    
+    
     
     
     
