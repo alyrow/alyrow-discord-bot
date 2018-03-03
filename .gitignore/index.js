@@ -12,7 +12,7 @@ bot.on('message', message => {
 
   if (isReady && message.content === 'lol'){
     //isReady = false;
-    let voiceChannel = message.guild.channels .filter(function (channel) { return channel.type === 'voice' }) .first() voiceChannel .join() .then(connection => { const dispatcher = connection.playFile('./stillAlive.mp3'); }) .catch(console.error);
+    let voiceChannel = message.guild.channels .filter(function (channel) { return channel.type === 'voice' }) .first() voiceChannel .join() .then(connection => { const dispatcher = connection.playFile('https://github.com/alyrow/alyrow-discord-bot/blob/master/.gitignore/DJVI%20-%20Alternative%20Reality%20(1).mp3'); }) .catch(console.error);
     
     
     
