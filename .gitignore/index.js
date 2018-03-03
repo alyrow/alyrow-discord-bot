@@ -10,14 +10,18 @@ bot.on('ready', function () {
 
 bot.on('message', message => {
 
-  if (isReady && message.content === 'lol'){
-    //isReady = false;
-    let voiceChannel = message.guild.channels .filter(function (channel) { return channel.type === 'voice' }) .first() voiceChannel .join() .then(connection => { const dispatcher = connection.playFile('https://github.com/alyrow/alyrow-discord-bot/blob/master/.gitignore/DJVI%20-%20Alternative%20Reality%20(1).mp3'); }) .catch(console.error);
-    
-    
-    
-    
-  }
+  if (!message.guild) return;
+
+if (message.content === '/join') {
+// Only try to join the sender's voice channel if they are in one themselves
+if (message.member.voiceChannel) {
+const connection = await message.member.voiceChannel.join();
+} else {
+message.reply('Rejoins un chanel vocal !');
+}
+}
+
+
   
   
   if (message.content.startsWith('!play')) {
