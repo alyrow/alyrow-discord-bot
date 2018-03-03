@@ -11,17 +11,8 @@ bot.on('ready', function () {
 bot.on('message', message => {
 
   if (isReady && message.content === 'lol'){
-    isReady = false;
-    var voiceChannel = message.member.voiceChannel;
-    voiceChannel.join().then(connection =>{
-      const dispatcher = connection.playFile('./DJVI - Alternative Reality (1).mp3');
-      
-      dispatcher.on("end", end => {
-    voiceChannel.leave();
-    var isReady = true;
-    });
-                                          }).catch(err => console.log(err));
-    
+    //isReady = false;
+    let voiceChannel = message.guild.channels .filter(function (channel) { return channel.type === 'voice' }) .first() voiceChannel .join() .then(connection => { const dispatcher = connection.playFile('./stillAlive.mp3'); }) .catch(console.error);
     
     
     
