@@ -9,34 +9,15 @@ bot.on('ready', function () {
 
 bot.on('message', message => {
 
-  if (message.content === 'how to embed') {
+  client.user.setActivity("Fan de UNITED");
 
-// We can create embeds using the MessageEmbed constructor
+const embed = new Discord.MessageEmbed()
 
-// Read more about all that you can do with the constructor
+.setColor(0x64E01D)
 
-// over at https://discord.js.org/#/docs/main/master/class/MessageEmbed
+.setDescription(':white_check_mark: Done, changes should now take effect! Sometimes, they might not.');
 
-const embed = new MessageEmbed()
-
-// Set the title of the field
-
-.setTitle('A slick little embed')
-
-// Set the color of the embed
-
-.setColor(0xFF0000)
-
-// Set the main content of the embed
-
-.setDescription('Hello, this is a slick embed!');
-
-// Send the embed to the same channel as the message
-
-message.channel.send(embed);
-
-}
-
+message.channel.send({ embed });
 
 
 })
