@@ -9,7 +9,7 @@ bot.on('ready', function () {
 
 bot.on('message', message => {
 
-  client.user.setActivity("Fan de UNITED");
+  bot.user.setActivity("Fan de UNITED");
 
 const embed = new Discord.MessageEmbed()
 
