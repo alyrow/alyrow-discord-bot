@@ -23,7 +23,7 @@ var embed = new Discord.RichEmbed()
 
 .addField("Status", message.author.presence.status, true)
 
-.addField("Playing", game, true)
+//.addField("Playing", game, true)
 
 .setColor(0x00FFFF)
 
