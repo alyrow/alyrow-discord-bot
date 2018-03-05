@@ -17,9 +17,9 @@ var embed = new Discord.RichEmbed()
 
 .addField("ID", message.author.id, true)
 
-.addField("Discord Join Date", joinedAtDate)
+//.addField("Discord Join Date", joinedAtDate)
 
-.addField("Server Join Date", joinedServerAtDate)
+//.addField("Server Join Date", joinedServerAtDate)
 
 .addField("Status", message.author.presence.status, true)
 
