@@ -11,13 +11,26 @@ bot.on('message', message => {
 
   bot.user.setActivity("Fan de UNITED");
 
-const embed = new Discord.MessageEmbed()
+var embed = new Discord.RichEmbed()
 
-.setColor(0x64E01D)
+.addField("Name", message.member, true)
 
-.setDescription(':white_check_mark: Done, changes should now take effect! Sometimes, they might not.');
+.addField("ID", message.author.id, true)
 
-message.channel.send({ embed });
+.addField("Discord Join Date", joinedAtDate)
+
+.addField("Server Join Date", joinedServerAtDate)
+
+.addField("Status", message.author.presence.status, true)
+
+.addField("Playing", game, true)
+
+.setColor(0x00FFFF)
+
+.setThumbnail(message.author.avatarURL)
+
+message.channel.sendEmbed(embed);
+
 
 
 })
