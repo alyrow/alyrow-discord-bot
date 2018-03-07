@@ -9,7 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.3.0"
+    "discord.js": "^11.3.0",
+"youtube-search": "^1.0.6",
+
+"mathjs": "^3.5.3",
+
+"ytdl-core": "^0.7.17",
+
+"express":"^4"
+
+
     
   }
 }
