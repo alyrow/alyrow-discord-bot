@@ -124,15 +124,12 @@ function secondsToString(seconds) {
 }
 
 bot.on('ready', function() {
- // bot.setStatus('online', config.status)
+  bot.setStatus('online', config.status)
   var msg = `
 -----------------------------
 Use 'git pull' to keep your bot updated
 Logging in...
 -----------------------------
-Logged in as ${bot.user.name}
-On ${bot.servers.length} servers with ${bot.channels.length} channels
-I have seen ${bot.users.length} users
 Let's go!
 -----------------------------`
 
